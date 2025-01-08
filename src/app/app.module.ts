@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './layouts/dashboard/dashboard.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+import { RouterModule, Routes} from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    SidebarComponent,
-    NavbarComponent
+    DashboardComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule, 
+    AppRoutingModule,
+    RouterModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent]

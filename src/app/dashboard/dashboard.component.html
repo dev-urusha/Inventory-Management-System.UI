@@ -1,0 +1,68 @@
+<div class="container-fluid p-0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark text-white sticky-top">
+      <div class="container-fluid">
+        <!-- Left-Aligned Brand -->
+        <span class="navbar-brand text-white ms-2">Inventory Management System</span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Main Content Area -->
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <div [ngClass]="{ 'col-md-3': isSidebarOpen, 'col-1': !isSidebarOpen }" 
+      class="bg-dark text-white p-3" style="transition: width 0.3s;">
+        <!-- Sidebar Toggle (" >> " Symbol) -->
+        <span
+          class="text-white d-flex align-items-center justify-content-right mb-3"
+          style="cursor: pointer; font-size: 1.5rem;"
+          (click)="toggleSidebar()"
+        >
+          <span *ngIf="isSidebarOpen">❮❮</span>
+          <span *ngIf="!isSidebarOpen">❯❯</span>
+        </span>
+
+        <!-- Sidebar Menu -->
+        <ul class="nav flex-column" *ngIf="isSidebarOpen">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/orders">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/invoices">Invoices</a>
+          </li>
+        </ul>
+<!-- Main Content -->
+ </div>
+    </div>
+</div>
+<div [ngClass]="{ 'col-md-9': isSidebarOpen, 'col': !isSidebarOpen }" class="bg-white p-4">
+  <router-outlet></router-outlet>
+</div>
+  
