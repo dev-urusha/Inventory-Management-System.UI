@@ -1,64 +1,74 @@
-/* Navbar Styles */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: white;
+  padding: 15px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.collapsed {
+  width: 120px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar ul li a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .navbar {
-    height: 60px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .sticky-top {
-    position: sticky;
-    top: 0;
-    z-index: 1030; /* Keep navbar on top */
-  }
-  
-  /* Sidebar Styles */
-  .bg-dark {
-    background-color: #343a40 !important; /* Dark Gray */
-  }
-  
-  .col-md-3, .col-1 {
-    height: calc(100vh - 60px); /* Subtract navbar height */
-    position: sticky;
-    top: 60px; /* Align below navbar */
-    overflow-y: auto;
-  }
-  
-  .col-1 {
-    width: 60px; /* Minimized Sidebar Width */
-  }
-  
-  .col-md-3 {
-    width: 250px; /* Expanded Sidebar Width */
-  }
-  
-  .nav-link {
-    font-size: 1rem;
-  }
-  
-  span {
-    font-weight: bold;
-  }
-  
-  /* Smooth transition for sidebar and main content */
-  .col-md-3, .col-md-9, .col-1, .col {
-    transition: width 0.3s ease-in-out;
-  }
-  
-  /* Main Content Adjustment */
-  .col-md-9 {
-    margin-left: 250px; /* Expanded Sidebar */
-  }
-  
-  .col {
-    margin-left: 60px; /* Minimized Sidebar */
-  }
-  
-  .bg-white {
-    background-color: white;
-  }
-  
-  /* Add space for router outlet content */
-  .p-4 {
-    padding: 1rem;
-  }
-  
+  background-color: #343a40;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content-area {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  left: 260px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar.collapsed + .toggle-btn {
+  left: 70px;
+}

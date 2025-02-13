@@ -1,0 +1,55 @@
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    flex-direction: column; /* Ensures vertical layout */
+  }
+  
+  .header {
+    width: 80%; /* Keep buttons aligned with table */
+    text-align: center;
+  }
+  
+  .table-centered {
+    width: 80%; /* Adjust table width */
+    margin: 0 auto; /* Center the table horizontally */
+    text-align: center;
+  }
+  
+  .table thead th {
+    text-align: center; /* Center-align headers */
+  }
+  
+  .table tbody td {
+    text-align: center; /* Center-align table content */
+  }
+  .table-container {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .mat-elevation-z8 {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  mat-paginator {
+    margin-top: 20px;
+  }
+  .full-width-table {
+    width: 100%;
+  }
+    
+
+/* Center align text for Price Per Quantity column
+td.mat-cell.price-column,
+th.mat-header-cell.price-column {
+   display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+} */

@@ -1,0 +1,69 @@
+<div class="product-details-container">
+  <h2>Product Details</h2>
+
+  <mat-card>
+    <mat-card-content>
+
+      <!-- Product Name -->
+      <div class="detail-row">
+        <span class="label">Product Name:</span>
+        <span class="value">{{ productForm.get('name')?.value }}</span>
+      </div>
+
+      <!-- Description -->
+      <div class="detail-row">
+        <span class="label">Description:</span>
+        <span class="value">{{ productForm.get('description')?.value }}</span>
+      </div>
+
+      <!-- Price Per Quantity -->
+      <div class="detail-row">
+        <span class="label">Price Per Quantity:</span>
+        <span class="value">{{ productForm.get('pricePerQuantity')?.value }}</span>
+      </div>
+
+      <!-- Quantity -->
+      <div class="detail-row">
+        <span class="label">Quantity:</span>
+        <span class="value">{{ productForm.get('quantity')?.value }}</span>
+      </div>
+
+       <!-- Total Quantities  -->
+       <div class="detail-row">
+        <span class="label">Total Quantities:</span>
+        <span class="value">{{ productForm.get('totalQuantities')?.value }}</span>
+      </div>
+
+      <!-- Total Price -->
+      <div class="detail-row">
+        <span class="label">Total Price:</span>
+        <span class="value">{{ productForm.get('totalPrice')?.value }}</span>
+      </div>
+
+      <!-- Stock Keeping Unit Name  -->
+      <div class="detail-row">
+        <span class="label">Stock Keeping Unit Name:</span>
+        <span class="value">{{ productForm.get('stockKeepingUnitName')?.value }}</span>
+      </div>
+
+      <!-- Category Name -->
+      <div class="detail-row">
+        <span class="label">Category:</span>
+        <span class="value">{{ productForm.get('categoryName')?.value }}</span>
+      </div>
+
+      <!-- Supplier Name  -->
+      <div class="detail-row">
+        <span class="label">Supplier Name:</span>
+        <span class="value">{{ productForm.get('supplierName')?.value }}</span>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Action Buttons -->
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="editProduct()">Edit</button>
+    <button mat-raised-button color="warn" (click)="goBack()">Back</button>
+  </div>
+</div>
